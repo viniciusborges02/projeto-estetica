@@ -47,6 +47,7 @@
 
 body{
     background-color: var(--cor2);
+    
 }
 
 header{
@@ -70,9 +71,32 @@ header > p {
     padding-bottom: 20px;
 }
 
+menu{
+    display: none;
+}
+
+menu > ul{
+    list-style-type: none;
+}
+
+span#menu{
+    font-family: var(--fonte-padrao);
+    font-weight: bolder;
+    color: var(--cor2);
+    background-image: linear-gradient(to right, var(--cor1), var(--cor4));
+    list-style: none;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    margin: 30px 50px 30px 50px;
+    border-radius: 20px;
+    text-shadow: 2px 2px 3px black;
+    box-shadow: 1px 1px 2px black;
+}
+
 main{
-    min-width: 200px;
-    max-width: 1000px;
+    width: 400px;
     margin: auto;
     margin-bottom: 30px;
     padding: 20px;
@@ -83,10 +107,14 @@ main{
 }
 
 main img{
-    width: 40%;
+
+    width: 100%;
+    height: 100%;
     max-width: 350px;
     display: block;
     margin: auto;
+    
+    
 }
 
 h1.sobre {
@@ -98,25 +126,17 @@ h1.sobre {
     text-shadow: 2px 2px 4px white;
 }
 
+
 main p{
     margin: 15px 0px 15px 0px;
     font-family: var(--fonte-padrao);
     font-size: 1em;
     font-weight: bolder;
     text-align: justify;
-    text-indent: 30px;
     line-height: 1.5em;
 }
 
-main h1{
-    font-family: var(--fonte-oruguita);
-    font-size: 2.5em;
-    text-align: center;
-    padding-top: 30px;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px white;
 
-}
 
 main a:hover{
 
@@ -158,18 +178,6 @@ footer > p {
 font-family: var(--fonte-linker);
 font-size: 1em;
 text-align: center;
-margin-top: 30px;
-}
-
-footer img{
-   
-
-    width: 5%;
-    min-width: 40px;
-    max-width: 40px;
-    display: block;
-    margin: auto;
-    padding-top: 15px;
 }
 
 footer a{
