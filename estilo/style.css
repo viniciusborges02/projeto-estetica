@@ -169,7 +169,6 @@ article a{
 
 
 footer{
-    min-height: 200px;
     background-image: linear-gradient(to right, var(--cor4), var(--cor1));
     padding: 5px;
 }
