@@ -28,6 +28,7 @@
     --cor2: #E5E1D8;
     --cor3: #B9AD9F;
     --cor4: #9B8264;
+    --cor-preto: #333;
     --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
     --fonte-flower: 'flower';
     --fonte-suite: 'suite';
@@ -45,7 +46,7 @@
 body {
     font-family: var(--fonte-padrao);
     background-color: var(--cor2);
-    color: var(--cor1);
+    color: var(--cor-preto);
     line-height: 1.6;
 }
 
@@ -53,7 +54,14 @@ body {
 header {
     background-image: linear-gradient(to bottom, var(--cor1), var(--cor4));
     text-align: center;
-    padding: 40px 0;
+    padding: 50px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 header h1 {
@@ -91,15 +99,12 @@ nav ul li a {
 }
 
 /* Imagens */
-img#first {
-    max-width: 100%;
+img#first,
+.full-width-img {
+    width: 100%;
     height: auto;
-}
-
-img {
-    max-width: 100%;
     display: block;
-    margin: 20px auto;
+    margin: 0 auto;
     border-radius: 10px;
 }
 
@@ -117,7 +122,7 @@ h1#proc,
 h1.sobre {
     font-family: var(--fonte-suite);
     text-align: center;
-    color: var(--cor1);
+    color: var(--cor-preto);
     margin-bottom: 30px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
@@ -142,42 +147,52 @@ p {
 
 /* Rodapé */
 footer {
-    background-image: linear-gradient(to right, var(--cor4), var(--cor1));
-    padding: 20px 0;
-    text-align: center;
-    font-family: var(--fonte-linker);
+    background-color: var(--cor1);
+    padding: 30px 0;
 }
 
-footer p {
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
     color: var(--cor2);
+    text-align: center;
 }
 
-footer a {
-    color: var(--cor0);
+.footer-content p {
+    margin: 5px 0;
+}
+
+.social-media a {
+    margin: 0 10px;
     text-decoration: none;
-    font-weight: bold;
 }
 
-footer a:hover {
-    background-color: var(--cor0);
-    color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    transition: 0.3s;
+.social-media img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-media a:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.2);
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    header {
-        padding: 20px;
+    .footer-container {
+        flex-direction: column;
     }
 
-    h1#proc, h1.sobre {
-        font-size: 1.5rem;
+    .social-media {
+        margin-top: 15px;
     }
 
-    main {
-        width: 95%;
+    header h1 {
+        font-size: 2.5rem;
     }
 
     nav ul {
@@ -185,4 +200,5 @@ footer a:hover {
         gap: 15px;
     }
 }
+
 
