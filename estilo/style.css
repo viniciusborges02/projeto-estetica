@@ -24,7 +24,7 @@
     font-weight: normal;
 }
 
-:root{
+:root {
     --cor0: #EFAA0F;
     --cor1: #735135;
     --cor2: #E5E1D8;
@@ -32,85 +32,63 @@
     --cor4: #9B8264;
 
     --fonte-padrao: Arial, Verdana, Helvetica, Sans-Serif;
-    --fonte-flower:'flower';
-    --fonte-suite:'suite';
-    --fonte-oruguita:'oruguitas';
+    --fonte-flower: 'flower';
+    --fonte-suite: 'suite';
+    --fonte-oruguita: 'oruguitas';
     --fonte-linker: 'autolinker';
-
 }
 
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
-body{
+body {
     background-color: var(--cor2);
-   
-    
 }
 
-header{
-    display: block;
+header {
     background-image: linear-gradient(to bottom, var(--cor1), var(--cor4));
-   width: 440px;
+    width: 100%;
     min-height: 200px;
-    margin: auto;
     text-align: center;
+    padding: 20px 0;
 }
 
-header > h1{
-  font-family: var(--fonte-flower);
-  font-size: 3em;
-  padding-top: 40px;
-  margin-bottom: 20px;
-  color: var(--cor2);
-  text-shadow: 5px 5px 8px black;
+header > h1 {
+    font-family: var(--fonte-flower);
+    font-size: 3em;
+    color: var(--cor2);
+    text-shadow: 5px 5px 8px black;
 }
 
-header > p {
-    font-family: var(--fonte-padrao);
-    font-size: 1.5em;
-    padding-bottom: 20px;
-}
-
-
-menu > ul{
+menu > ul {
     list-style-type: none;
 }
 
-
-h1#proc{
+h1#proc {
     font-size: 25px;
     font-family: var(--fonte-padrao);
     font-weight: bolder;
     color: var(--cor2);
-    list-style: none;
     text-align: center;
-    display: block;
-    cursor: pointer;
-    margin: 30px 50px 30px 50px;
+    margin: 30px;
     text-shadow: 2px 2px 3px black;
-   
 }
 
-main{
-    width: 400px;
+main {
+    width: 90%;
     margin: auto;
-    margin-bottom: 30px;
     padding: 20px;
     background-color: var(--cor3);
     box-shadow: 0px 0px 8px black;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: 10px;
 }
 
 img#first {
-
-max-width: 440px;  
-    
-    
+    max-width: 100%;
+    height: auto;
 }
 
 h1.sobre {
@@ -122,15 +100,14 @@ h1.sobre {
     text-shadow: 2px 2px 4px white;
 }
 
-img{
-    max-width: 400px;   
+img {
+    max-width: 100%;
     display: block;
     margin: auto; 
 }
 
-
-main p{
-    margin: 15px 0px 15px 0px;
+main p {
+    margin: 15px 0;
     font-family: var(--fonte-padrao);
     font-size: 1em;
     font-weight: bolder;
@@ -138,17 +115,12 @@ main p{
     line-height: 1.5em;
 }
 
-
-
-main a:hover{
-
+main a:hover {
     color: var(--cor0);
     text-decoration: underline;
 }
 
-
-article li{
-   
+article li {
     font-family: var(--fonte-padrao);
     font-weight: bolder;
     color: var(--cor2);
@@ -156,40 +128,60 @@ article li{
     list-style: none;
     text-align: center;
     padding: 10px;
-    margin: 30px 50px 30px 50px;
+    margin: 30px;
     border-radius: 20px;
     text-shadow: 2px 2px 3px black;
     box-shadow: 1px 1px 2px black;
 }
 
-article a{
-
+article a {
     text-decoration: none;
-
 }
 
-
-
-footer{
-    width: 425px;
+footer {
+    width: 100%;
     margin: auto;
     background-image: linear-gradient(to right, var(--cor4), var(--cor1));
-    padding: 5px;
+    padding: 10px;
+    text-align: center;
 }
-
 
 footer > p {
-font-family: var(--fonte-linker);
-font-size: 1em;
-text-align: center;
+    font-family: var(--fonte-linker);
+    font-size: 1em;
 }
 
-footer a{
+footer a {
     text-decoration: none;
 }
 
-footer a:hover{
+footer a:hover {
     background-color: red;
-   color: white;
+    color: white;
+}
 
+/* Efeito parallax */
+.parallax {
+    background-image: url('imagens/img-sobre-mim.jpeg');
+    height: 400px; /* ajuste conforme necessário */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header, footer {
+        padding: 10px;
+    }
+
+    h1#proc, h1.sobre {
+        font-size: 1.5em;
+        margin: 20px 0;
+    }
+
+    main {
+        width: 90%;
+    }
 }
