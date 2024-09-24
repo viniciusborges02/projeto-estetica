@@ -142,23 +142,26 @@ footer {
     width: 100%;
     margin: auto;
     background-image: linear-gradient(to right, var(--cor4), var(--cor1));
-    padding: 10px;
+    padding: 20px;
     text-align: center;
 }
 
-footer > p {
+.footer-content p {
+    margin: 5px 0;
     font-family: var(--fonte-linker);
     font-size: 1em;
 }
 
 footer a {
     text-decoration: none;
+    color: var(--cor0);
 }
 
 footer a:hover {
     background-color: red;
     color: white;
 }
+
 
 /* Efeito parallax */
 .parallax {
