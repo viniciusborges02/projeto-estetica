@@ -1,30 +1,36 @@
 @charset "UTF-8";
 
-/* Fontes personalizadas */
 @font-face {
-    font-family: 'flower';
+    font-family:'flower';
     src: url('../fontes/flower.otf');
+    font-weight: normal;
 }
+
 @font-face {
     font-family: 'suite';
-    src: url('../fontes/suite.ttf');
+    src: url(../fontes/suite.ttf);
+    font-weight: normal;
 }
+
 @font-face {
     font-family: 'oruguitas';
     src: url('../fontes/oruguitas.otf');
+    font-weight: normal;
 }
+
 @font-face {
     font-family: 'autolinker';
     src: url('../fontes/Autolinker.otf');
+    font-weight: normal;
 }
 
-/* Variáveis de cor e fontes */
 :root {
     --cor0: #EFAA0F;
     --cor1: #735135;
     --cor2: #E5E1D8;
     --cor3: #B9AD9F;
     --cor4: #9B8264;
+
     --fonte-padrao: Arial, Verdana, Helvetica, Sans-Serif;
     --fonte-flower: 'flower';
     --fonte-suite: 'suite';
@@ -32,7 +38,6 @@
     --fonte-linker: 'autolinker';
 }
 
-/* Resetações gerais */
 * {
     margin: 0;
     padding: 0;
@@ -43,9 +48,8 @@ body {
     background-color: var(--cor2);
 }
 
-/* Cabeçalho */
 header {
-    background: linear-gradient(to bottom, var(--cor1), var(--cor4));
+    background-image: linear-gradient(to bottom, var(--cor1), var(--cor4));
     width: 100%;
     min-height: 200px;
     text-align: center;
@@ -59,15 +63,14 @@ header > h1 {
     text-shadow: 5px 5px 8px black;
 }
 
-/* Menu */
 menu > ul {
     list-style-type: none;
 }
 
-#proc {
+h1#proc {
     font-size: 25px;
     font-family: var(--fonte-padrao);
-    font-weight: bold;
+    font-weight: bolder;
     color: var(--cor2);
     text-align: center;
     margin: 30px;
@@ -88,7 +91,7 @@ img#first {
     height: auto;
 }
 
-.sobre {
+h1.sobre {
     font-family: var(--fonte-suite);
     font-size: 2em;
     text-align: center;
@@ -100,19 +103,18 @@ img#first {
 img {
     max-width: 100%;
     display: block;
-    margin: auto;
+    margin: auto; 
 }
 
 main p {
     margin: 15px 0;
     font-family: var(--fonte-padrao);
     font-size: 1em;
-    font-weight: bold;
+    font-weight: bolder;
     text-align: justify;
     line-height: 1.5em;
 }
 
-/* Links e listas */
 main a:hover {
     color: var(--cor0);
     text-decoration: underline;
@@ -120,9 +122,9 @@ main a:hover {
 
 article li {
     font-family: var(--fonte-padrao);
-    font-weight: bold;
+    font-weight: bolder;
     color: var(--cor2);
-    background: linear-gradient(to right, var(--cor1), var(--cor4));
+    background-image: linear-gradient(to right, var(--cor1), var(--cor4));
     list-style: none;
     text-align: center;
     padding: 10px;
@@ -136,11 +138,10 @@ article a {
     text-decoration: none;
 }
 
-/* Rodapé */
 footer {
     width: 100%;
     margin: auto;
-    background: linear-gradient(to right, var(--cor4), var(--cor1));
+    background-image: linear-gradient(to right, var(--cor4), var(--cor1));
     padding: 10px;
     text-align: center;
 }
@@ -162,7 +163,7 @@ footer a:hover {
 /* Efeito parallax */
 .parallax {
     background-image: url('imagens/img-sobre-mim.jpeg');
-    height: 400px;
+    height: 400px; /* ajuste conforme necessário */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -174,10 +175,12 @@ footer a:hover {
     header, footer {
         padding: 10px;
     }
-    #proc, .sobre {
+
+    h1#proc, h1.sobre {
         font-size: 1.5em;
         margin: 20px 0;
     }
+
     main {
         width: 90%;
     }
